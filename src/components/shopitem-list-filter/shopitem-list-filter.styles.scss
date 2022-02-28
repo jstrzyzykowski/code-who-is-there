@@ -1,0 +1,27 @@
+@import "../../sass/utilities/variables";
+
+.shopitemListFilter {
+  position: relative;
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__checkmark {
+    border: 1px solid $inactive-gray;
+    height: 30px;
+    font-size: 12px;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $inactive-gray;
+  }
+
+  input:checked ~ &__checkmark {
+    background-color: $violet;
+    border-color: $violet;
+    color: $white;
+  }
+}

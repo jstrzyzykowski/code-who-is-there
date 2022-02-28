@@ -1,0 +1,57 @@
+@import "variables";
+
+@mixin page {
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+@mixin background {
+  background: rgb(51,56,64);
+  background: linear-gradient(145deg, rgba(51,56,64,1) 0%, rgba(37,40,46,1) 100%);
+}
+
+@mixin gradientBlue {
+  background: rgb(79,167,249);
+  background: linear-gradient(90deg, rgba(79,167,249,1) 0%, rgba(52,97,211,1) 100%);
+}
+
+@mixin gradientGreen {
+  background: rgb(2,199,88);
+  background: linear-gradient(90deg, rgba(2,199,88,1) 0%, rgba(104,237,1,1) 100%);
+}
+
+@mixin gradientOrange {
+  background: rgb(238,166,1);
+  background: linear-gradient(90deg, rgba(238,166,1,1) 0%, rgba(222,173,0,1) 100%);
+}
+
+@mixin label {
+  padding: 6px 14px;
+  font-size: 14px;
+  color: $inactive-gray;
+  border: 1px solid $inactive-gray;
+  border-radius: $border-radius;
+}
+
+@mixin modalDescription {
+  font-size: 12px;
+  color: $active-gray;
+}
+
+@mixin closeModalButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin sm-screen {
+  @media (min-width: 768px) { @content; }
+}

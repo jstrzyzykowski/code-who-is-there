@@ -1,0 +1,58 @@
+@import '../../../sass/utilities/mixins';
+@import '../../../sass/utilities/variables';
+
+.formInput {
+  position: relative;
+  margin: 10px 0;
+  display: flex;
+
+  &__input {
+    margin-left: auto;
+    background: none;
+    color: $gray;
+    font-size: 14px;
+    padding: 12px 10px;
+    display: block;
+    width: calc(100% - 40px);
+    border: 1px solid #3F4249;
+    border-radius: 0 $border-radius $border-radius 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: rgba(255,255,255,0.02);
+      color: $inactive-gray;
+    }
+  }
+
+  &__label {
+    color: $inactive-gray;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease all;
+    background-color: #3F4249;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+    &.shrink {
+      background-color: $violet;
+      color: $white;
+    }
+
+    &.disabled {
+      background-color: $inactive-gray;
+      color: $gray;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../sass/utilities/variables";
+
+.avatar {
+  overflow: hidden;
+  border-radius: $border-radius;
+  position: relative;
+  box-sizing: content-box;
+
+  &.circle {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__activityStatus {
+    width: 10px;
+    height: 10px;
+    background-color: indianred;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &.active {
+      background-color: $green;
+    }
+  }
+}

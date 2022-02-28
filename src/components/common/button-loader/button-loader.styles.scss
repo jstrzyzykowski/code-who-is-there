@@ -1,0 +1,22 @@
+.buttonLoader {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  border: 3px solid rgba(0,0,0,0.15);
+  border-top-color: #cbcbcb;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

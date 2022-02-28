@@ -1,0 +1,75 @@
+@import "../../sass/utilities/mixins";
+@import "../../sass/utilities/variables";
+
+.welcomePage {
+  &__appVersion {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: $inactive-gray;
+    border: 1px solid $inactive-gray;
+    padding: 2px 6px;
+    border-radius: $border-radius;
+  }
+
+  @include page;
+  padding: 20px 20px 30px;
+  justify-content: space-between;
+  text-align: center;
+  @include background;
+  
+  &__header {
+    margin-top: 70px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-transform: uppercase;
+
+    &-text {
+      font-size: 32px;
+      margin-bottom: 24px;
+
+      span {
+        background-color: $button-gray;
+        padding: 8px;
+        border-radius: $border-radius;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -38px;
+          left: 0;
+          width: 55px;
+          height: 55px;
+          background-image: url('../../assets/robot/10.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
+    &-subText {
+      font-size: 12px;
+      color: $blue;
+      text-transform: none;
+    }
+  }
+
+  &__imageContainer {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+
+    img {
+      opacity: 0.3;
+    }
+  }
+
+  &__buttonsContainer {
+    display: grid;
+    row-gap: 10px;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../../sass/utilities/variables";
+@import "../../../sass/utilities/mixins";
+
+.addedItemModal__header {
+  margin-bottom: 20px;
+
+  &-description {
+    @include modalDescription;
+
+    span {
+      color: whitesmoke;
+    }
+  }
+}
+
+.addedItemModal__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &-itemName {
+    color: $active-gray;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+
+.addedItemModal__actions {
+  display: flex;
+  justify-content: center;
+
+  .customButton {
+    height: auto;
+    padding: 8px;
+    width: 50%;
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

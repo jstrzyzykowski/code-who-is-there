@@ -1,0 +1,75 @@
+@import '../../sass/utilities/variables';
+
+.inventoryListItem {
+  display: flex;
+  flex-direction: column;
+  border-radius: $border-radius;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.1);
+  position: relative;
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: $border-radius;
+
+    &-displayName {
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+
+  &__body {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+
+    &-itemInfoContainer {
+      display: flex;
+      margin-bottom: 10px;
+
+      .customItemIcon {
+        height: 55px;
+        width: 55px;
+        margin-right: 5px;
+      }
+
+      &-statList {
+        display: grid;
+        row-gap: 2px;
+        grid-template-rows: repeat(3,auto);
+        flex-grow: 1;
+
+        &-stat {
+          display: flex;
+          padding: 0 10px;
+          background-color: rgba(0,0,0,0.2);
+          border-radius: $border-radius;
+          font-size: 12px;
+          align-items: center;
+          color: $white;
+          height: 17px;
+
+          i {
+            width: 20px;
+            font-size: 10px;
+          }
+
+          &-value {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+
+            &-base {
+              color: $active-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

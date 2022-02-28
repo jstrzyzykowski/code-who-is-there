@@ -1,0 +1,65 @@
+@import "../../sass/utilities/variables";
+
+.dropdownNavigationItem {
+  border-radius: $border-radius;
+  overflow: hidden;
+
+
+  &__link {
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: $inactive-gray;
+    font-size: 14px;
+    background-color: rgba(255,255,255,0.05);
+
+    i {
+      font-size: 16px;
+      width: 40px;
+    }
+
+    &-text {
+      flex-grow: 1;
+
+      &-title {
+        text-transform: capitalize;
+        font-size: 14px;
+        color: $gray;
+      }
+
+      &-description {
+        font-size: 12px;
+        color: $active-gray;
+      }
+    }
+
+    .label-switcher {
+      font-size: 12px;
+      background-color: $inactive-gray;
+      color: #292B2F;
+      padding: 4px 6px;
+      border-radius: $border-radius;
+      margin-left: auto;
+
+      &.active {
+        background-color: $green;
+        color: $pure-white;
+      }
+    }
+
+
+    &.active {
+      background-color: rgba(255,255,255,0.1);
+      i {
+        color: $gray;
+      }
+      .dropdownNavigationItem__link-text-title {
+        color: $white;
+      }
+      .dropdownNavigationItem__link-text-description {
+        color: $gray;
+      }
+    }
+  }
+}

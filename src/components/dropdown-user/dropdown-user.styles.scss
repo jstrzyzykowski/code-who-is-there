@@ -1,0 +1,36 @@
+@import "../../sass/utilities/variables";
+@import "../../sass/utilities/mixins";
+
+.dropdownUserWrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 20px 10px;
+  background-color: $violet;
+
+  &__info {
+    flex-grow: 1;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+      display: flex;
+      margin-bottom: 5px;
+
+      &-nickname {
+        color: $white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+    &-comment {
+      background-color: rgba(0,0,0,0.1);
+      padding: 5px;
+      border-radius: $border-radius;
+      font-size: 12px;
+      flex-grow: 1;
+      color: #cbcbcb;
+    }
+  }
+}

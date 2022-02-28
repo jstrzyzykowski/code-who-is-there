@@ -1,0 +1,40 @@
+.messageModal {
+  display: flex;
+  flex-direction: column;
+  //padding-top: 20px;
+  //padding-top: 5px;
+
+  &__title {
+    font-weight: lighter;
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+
+    &-imageContainer {
+      width: 50px;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    &-message {
+      font-size: 12px;
+      padding-right: 10px;
+    }
+  }
+
+  .customButton {
+    align-self: flex-end;
+    padding: 0;
+    height: 30px;
+    width: 60px;
+  }
+}
+

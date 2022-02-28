@@ -1,0 +1,47 @@
+@import "../../../sass/utilities/variables";
+@import "../../../sass/utilities/mixins";
+
+.customButton {
+  border: 1px solid $button-gray;
+  background: $button-gray;
+  //padding: 11px;
+  padding: 0 11px;
+  color: $active-gray;
+  height: 40px;
+  position: relative;
+
+  &.reversed {
+    border: 1px solid $button-gray;
+    background-color: transparent;
+    span {
+      margin-left: 4px;
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+
+  &.fluid {
+    width: 100%;
+    text-align: center;
+  }
+
+  &.blue,
+  &.green,
+  &.red {
+    border: none;
+    //padding: 12px;
+    color: $white;
+  }
+
+  &.blue {
+    background-color: $violet;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.red {
+    background-color: indianred;
+  }
+}

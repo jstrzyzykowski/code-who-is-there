@@ -1,0 +1,9 @@
+.signInForm {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  .customButton[type="submit"] {
+    margin-top: 20px;
+  }
+}

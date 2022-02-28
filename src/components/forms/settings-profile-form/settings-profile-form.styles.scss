@@ -1,0 +1,18 @@
+.settingsProfileForm {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  &__inputsContainer {
+    flex-grow: 1;
+    padding-bottom: 20px;
+  }
+
+  &__buttonsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
+}
+
+

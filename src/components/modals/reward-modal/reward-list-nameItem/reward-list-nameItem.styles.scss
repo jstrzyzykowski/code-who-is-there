@@ -1,0 +1,17 @@
+@import "../../../../sass/utilities/variables";
+
+.rewardListNameItem {
+  display: flex;
+  font-size: 12px;
+  width: 70%;
+  justify-content: space-between;
+  color: $active-gray;
+
+  &__name {
+    color: $white;
+  }
+
+  &__rarity {
+    font-size: 12px;
+  }
+}

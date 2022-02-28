@@ -1,0 +1,23 @@
+@import '../../../sass/utilities/variables';
+
+.statisticker {
+  height: 40px;
+  padding: 0 10px;
+  background-color: $button-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius;
+  color: $active-gray;
+
+  i {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  &__value {
+    color: $white;
+    font-size: 12px;
+  }
+
+}

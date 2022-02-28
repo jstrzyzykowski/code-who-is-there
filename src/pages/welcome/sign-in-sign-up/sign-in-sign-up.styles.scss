@@ -1,0 +1,30 @@
+@import "../../../sass/utilities/mixins";
+@import "../../../sass/utilities/variables";
+
+.signInSignUpPage {
+  @include page;
+  @include background;
+
+  &__header {
+    margin: 20px 0;
+
+    &-text {
+      font-size: 32px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  &__iconWrapper {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 8px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+  }
+
+}

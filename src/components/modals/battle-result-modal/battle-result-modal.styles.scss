@@ -1,0 +1,41 @@
+@import "../../../sass/utilities/variables";
+@import "../../../sass/utilities/mixins";
+
+.battleResultModal__header {
+  margin-bottom: 20px;
+
+  &-description {
+    @include modalDescription;
+  }
+}
+
+.battleResultModal__body {
+  margin-bottom: 20px;
+
+  &-battleParticipants {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 15px;
+  }
+
+  &-battleRewardContainer {
+    &-label {
+      text-align: center;
+      font-size: 12px;
+      color: $active-gray;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.battleResultModal__actions {
+  display: flex;
+  justify-content: center;
+
+  .customButton {
+    height: auto;
+    padding: 8px;
+    width: 50%;
+  }
+}

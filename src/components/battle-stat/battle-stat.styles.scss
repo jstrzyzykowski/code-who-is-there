@@ -1,0 +1,29 @@
+@import "../../sass/utilities/mixins";
+@import "../../sass/utilities/variables";
+
+.battleStat {
+  height: 62px;
+  width: 62px;
+  background-color: $button-gray;
+  border-radius: $border-radius + 2;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__value {
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  &__label {
+    font-size: 12px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $active-gray;
+  }
+}

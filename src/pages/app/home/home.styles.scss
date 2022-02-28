@@ -1,0 +1,99 @@
+@import "../../../sass/utilities/mixins";
+@import "../../../sass/utilities/variables";
+
+.homePage {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  @include background;
+
+  &__spot {
+    position: relative;
+
+    &-message {
+      //border: 1px solid indianred;
+      border-radius: $border-radius;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      @include background;
+      //background-color: #43474D;
+      display: grid;
+      grid-template-columns: 30px auto;
+      padding: 10px;
+      column-gap: 10px;
+
+      backdrop-filter: blur(1px);
+
+      i {
+        //width: 50px;
+        font-size: 21px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: indianred;
+        border-radius: $border-radius;
+        //border: 1px solid red;
+      }
+
+      &-text {
+        font-size: 12px;
+        color: #cbcbcb;
+
+        span {
+          font-weight: bold;
+          color: indianred;
+        }
+      }
+    }
+
+    &-spotImageContainer {
+      height: 300px;
+      background-color: $button-gray;
+    }
+
+    &-spotInfo {
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      padding: 14px 20px;
+
+      &-label {
+        color: $white;
+        font-size: 14px;
+        font-weight: bold;
+
+        i {
+          font-size: 24px;
+        }
+      }
+
+      &-value {
+        padding: 4px 6px;
+        border-radius: $border-radius;
+        margin-left: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        color: $pure-white;
+        background-color: $green;
+      }
+    }
+  }
+
+  &__activeUsers {
+    padding: 10px;
+
+    &.empty {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

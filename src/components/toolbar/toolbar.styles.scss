@@ -1,0 +1,20 @@
+@import "../../sass/utilities/variables";
+@import "../../sass/utilities/mixins";
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #292B2F;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+
+  &__informators {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 10px;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../sass/utilities/variables";
+
+.burger {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $button-gray;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &.active {
+    .burger__layer {
+      margin: 0;
+    }
+
+    .burger__layer:nth-of-type(1) {
+      transform: translateY(100%) rotate(45deg);
+    }
+
+    .burger__layer:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    .burger__layer:nth-of-type(3) {
+      transform: translateY(-100%) rotate(-45deg);
+    }
+  }
+
+  &__layer {
+    margin: 2px 0;
+    height: 2px;
+    width: 18px;
+    background-color: $active-gray;
+    border-radius: $border-radius;
+    transition: all 0.2s ease-out;
+  }
+}

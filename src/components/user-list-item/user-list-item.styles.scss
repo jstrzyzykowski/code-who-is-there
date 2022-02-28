@@ -1,0 +1,117 @@
+@import "../../sass/utilities/variables";
+@import "../../sass/utilities/mixins";
+
+.userListItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 10px;
+  background-color: #f3f3f3;
+  background-color: rgba(255,255,255,0.1);
+  padding-left: 10px;
+  align-items: center;
+  border-radius: $border-radius + 1;
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+
+  &.rank {
+    padding-left: 0;
+    grid-template-columns: auto auto 1fr auto;
+  }
+
+  &.first {
+    background-color: rgba(238,166,1, 0.1);
+    border: 1px solid #CC7A0D;
+
+    .userListItem__rankContainer-color {
+      background: rgb(238,166,1);
+    }
+  }
+
+  &.second {
+    background-color: rgba(79,167,249, 0.1);
+    border: 1px solid #2875bc;
+
+    .userListItem__rankContainer-color {
+      background: rgb(79,167,249);
+    }
+  }
+
+  &.third {
+    background-color: rgba(2,199,88, 0.1);
+    border: 1px solid #09833e;
+
+    .userListItem__rankContainer-color {
+      background: rgb(2,199,88);
+    }
+  }
+
+  &__rankContainer {
+    border-top-left-radius: $border-radius;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &-value {
+      font-size: 11px;
+      width: 18px;
+      height: 18px;
+      background-color: rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-color {
+      background-color: rgba(255,255,255,0.1);
+      flex-grow: 1;
+    }
+  }
+
+  &__userInfo {
+    overflow: hidden;
+
+    &-nickname {
+      font-size: 14px;
+      font-weight: bold;
+      color: $white;
+    }
+
+    &-comment {
+      font-size: 14px;
+      color: $active-gray;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-rows: repeat(2, 20px);
+    row-gap: 5px;
+    width: 65px;
+    margin-right: 10px;
+
+    .statisticker {
+      background-color: rgba(0,0,0,0.1);
+      height: auto;
+
+      .statisticker__value {
+        font-size: 11px;
+      }
+
+      i {
+        font-size: 12px;
+        margin-right: 4px;
+      }
+    }
+
+    .customButton {
+      padding: 0;
+      height: 20px;
+      color: $white;
+    }
+  }
+}

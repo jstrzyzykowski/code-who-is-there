@@ -1,0 +1,30 @@
+.inventoryList {
+  &__filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+
+    &.empty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .emptyInfo {
+      margin: 50px 0;
+
+      &__imageContainer {
+        width: 50px;
+      }
+    }
+  }
+}

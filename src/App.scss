@@ -1,0 +1,45 @@
+@import "./sass/utilities/mixins";
+@import "./sass/utilities/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+.app {
+    @include background;
+    color: $white;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+button {
+    border: none;
+    border-radius: 3px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@include sm-screen {}

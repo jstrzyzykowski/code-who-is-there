@@ -1,0 +1,79 @@
+@import '../sass/utilities/mixins';
+@import '../sass/utilities/variables';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+  overflow: scroll;
+}
+
+.modalWrapper {
+  @include background;
+  color: $white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 420px;
+  min-width: 260px;
+  max-height: 90vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  animation: fadeIn 0.1s 1 ease-out;
+
+  &__header {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+    &-title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      color: $inactive-gray;
+    }
+
+    &-closeModalButton {
+      color: $gray;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    padding: 10px;
+    color: #cbcbcb;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

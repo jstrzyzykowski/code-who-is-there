@@ -1,0 +1,64 @@
+@import "../../../sass/utilities/variables";
+
+.infoBox {
+  position: relative;
+  font-size: 12px;
+
+  height: 100px;
+  margin: 10px 0 20px;
+  color: #292B2F;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 26px;
+    height: 98px;
+    width: 100px;
+    transform: skew(-25deg);
+    z-index: 0;
+    border: 1px solid #CC7A0D;
+    background: rgb(238,166,1);
+    background: linear-gradient(90deg, rgba(238,166,1,1) 0%, rgba(222,173,0,1) 100%);
+  }
+
+  &__infobotContainer {
+    height: 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__infoMessage {
+    border: 1px solid #CC7A0D;
+    background: rgb(238,166,1);
+    background: linear-gradient(90deg, rgba(238,166,1,1) 0%, rgba(222,173,0,1) 100%);
+    padding: 10px;
+    z-index: 1;
+    border-left: none;
+    height: 100%;
+
+    &-title {
+      font-weight: bold;
+      color: black;
+    }
+
+    &-description {}
+  }
+
+  .customIconButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0,0,0,0.2);
+    border: none;
+    color: $white;
+    z-index: 1;
+  }
+}

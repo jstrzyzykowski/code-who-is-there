@@ -1,0 +1,35 @@
+@import "../../../sass/utilities/variables";
+
+.customItemIcon {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: $border-radius;
+  overflow: hidden;
+  position: relative;
+  background-color: #292B2F;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &__quantity {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d7d7d7;
+    background-color: rgba(255,255,255,0.65);
+
+    &-value {
+      color: #292B2F;
+      font-size: 10px;
+      font-weight: bold;
+    }
+  }
+}
+
